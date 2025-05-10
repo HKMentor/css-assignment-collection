@@ -32,7 +32,7 @@ Each folder contains:
 - HTML5
 - CSS3
 - Visual Studio Code
-- Live Server Extension (for live preview)
+- Live Server Extension ([for live preview](https://hk-css-assignment-collection.netlify.app/))
 
 ## 📌 Purpose
 
@@ -41,7 +41,7 @@ This repository is created to:
 - Showcase my learning progress
 - Help others who are also learning CSS basics and intermediate concepts
 
-## 🌐 Live Preview (Optional)
+## 🌐 Live Preview ([Optional](https://hk-css-assignment-collection.netlify.app/)) 
 You can view selected assignments live here (add GitHub Pages or Netlify link if available).
 
 ## 🙌 A Note from Me
