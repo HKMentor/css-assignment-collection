@@ -10,48 +10,61 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <!-- header section -->
-  <div class="container" "> 
-    <div class="whatsapp-logo">
-      <a href="" class="whatsApp"  rel="noopener noreferrer">
-        <img src="./images/WhatsApp.webp" alt="">
-       </a>
+<!-- header section -->
+<div class="container">
+  <div class="whatsapp-logo">
+    <a href="" class="whatsApp" rel="noopener noreferrer">
+      <img src="./images/WhatsApp.webp" alt="" />
+    </a>
+  </div>
+
+  <!-- ✅ Mobile Menu Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <img
+      src="images/menu.png"
+      alt="menulogo"
+      width="40px"
+      height="40px"
+      class="menu-icon"
+    />
+     <ul>
+        <li><a href="./biography.html">BIOGRAPHY</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="https://hk-website.netlify.app/">MINI_HACKATHONE</a></li>
+        <li><a href="https://hooriakhan-html-projects.netlify.app/">HTML ASSIGNMENT</a></li>
+        <li><a href="https://resume-ui-hk.netlify.app/">RESUME</a></li>
+        <li><a href="#jokes">JOKES</a></li>
+      </ul>
+  </div>
+
+  <div class="side-container">
+    <div class="image">
+      <img src="./images/logo.jpeg" alt="Website Logo" width="100px" />
+      <h2>HOORIA Fatima</h2>
     </div>
-    <div class="side-container" >
-      <div class="image">
-        <img src="./images/logo.jpeg" alt="Website Logo" width="100px" />
-        <h2>HOORIA Fatima</h2>
-      </div>
-      <div class="menu">
-        <ul>
-          <li><a href="./biography.html"  rel="noopener noreferrer">BIOGRAPHY</a></li>
-          <li><a href="#gallery"  rel="noopener noreferrer">GALLERY</a></li>
-          <li><a href="https://hk-website.netlify.app/"  rel="noopener noreferrer">MINI_HACKATHONE</a></li>
-          <li><a href="https://hooriakhan-html-projects.netlify.app/">HTML ASSIGNMENT</a></li>
-          <li><a href="https://resume-ui-hk.netlify.app/">RESUME</a></li>
 
-          <li><a href="#jokes">JOKES</a></li>
-        </ul>
-         <img
-          src="images/menu.png"
-          alt="menulogo"
-          width="40px"
-          height="40px"
-          class="menu-icon"
-          onclick="menutoggle()"
-        />
-      </div>
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="./biography.html">BIOGRAPHY</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="https://hk-website.netlify.app/">MINI_HACKATHONE</a></li>
+        <li><a href="https://hooriakhan-html-projects.netlify.app/">HTML ASSIGNMENT</a></li>
+        <li><a href="https://resume-ui-hk.netlify.app/">RESUME</a></li>
+        <li><a href="#jokes">JOKES</a></li>
+      </ul>
+    </div>
 
-      <div class="icon">
-        <ul>
-          <li><a href="https://github.com/HKMentor" target="_blank"  rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/hooria-fatima-54753927b/ " target="_blank"  rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-          <li><a href="https://www.instagram.com/hooria_codehub/" target="_blank"  rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61553411646244&ref=ig_profile_ac" target="_blank"  rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
-        </ul>
-      </div>
+    <div class="icon">
+      <ul>
+        <li><a href="https://github.com/HKMentor" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hooria-fatima-54753927b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/hooria_codehub/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61553411646244&ref=ig_profile_ac" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+      </ul>
     </div>
   </div>
+</div>
+
 
 <!-- center content -->
 <div class="main-content" id="top">
@@ -252,16 +265,15 @@
   </div>
 </footer>
  <!-- js -->
-  <script>
-    function menutoggle() {
-  const menu = document.querySelector('.menu ul');
-  if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-  } else {
-    menu.style.display = 'block';
-  }
-}
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
 
-  </script>
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
+
+
 </body>
 </html>

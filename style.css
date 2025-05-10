@@ -52,15 +52,13 @@ body{
      font-size: 20px;
      font-weight: bold;
      text-align: center;
-     
-}
-.side-container{
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+     
 }
+
 .side-container img{
     width: 150px;
     height: 200px;
@@ -565,7 +563,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.menu ul {
+.menu-toggle ul {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -577,27 +575,27 @@ body {
     cursor: pointer;
 }
 
-.menu ul li a {
+.menu-toggle ul li a {
     color: #ffffff;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
 
-.menu ul li a:hover {
+.menu-toggle ul li a:hover {
     color: #ecb164;
     transform: matrix(1, 1, 0, 1, 0, 0);
     text-shadow: 0 0 30px #f8f2f2;
 }
 
-.main{
+.menu-toggle{
     flex: 1;
     text-align: right;
 }
-.main ul{
+.menu-toggle ul{
     display: inline-block;
     list-style: none;
 }
-.main ul li {
+.menu-toggle ul li {
     display: inline-block;
     margin-right: 20px;
 }
@@ -746,7 +744,7 @@ a{
      .side-container img{
       display: none; 
      }
-    .menu ul  {
+    .menu-toggle ul  {
       display: none;
       flex-direction: column;
       align-items: center;
@@ -760,13 +758,13 @@ a{
         padding: 5px 5px;
         transition: max-height 0.5s;
     }
-    .menu ul li{
+    .menu-toggle ul li{
          display: block;
         margin-right: 40px;
         margin-top: 0px;
         margin-bottom: 20px;
     }
-    .menu ul li a {
+    .menu-toggle ul li a {
                 color: #fff;
 
     }
@@ -847,4 +845,42 @@ a{
     .footer-social i {
         font-size: 1.2em;
     }
+}
+
+
+
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #5e1010;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .side-container {
+    flex-direction: column;
+  }
 }
